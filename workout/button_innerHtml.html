@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button_inner Html</title>
+    <style>
+        button{
+            background-color: skyblue;
+            height: 30px;
+            width: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="greeting"></div>
+    <button onclick="first()">Click</button>
+    <script>
+        function first(){
+            document.getElementById("greeting").innerHTML="Hello World";
+        }
+    </script>
+</body>
+</html>
