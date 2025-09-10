@@ -1,0 +1,9 @@
+Immutable - store single value
+
+1.String :- ' '," "
+2.Number :- 6,7,8...
+3.Boolean :- true/false
+4.Null :- absence of value
+5.Undefined :- variable declared,but value not assigned to it(eg-- var x;)
+6.Symbol :- unique immutable values,used with object property keys (eg-- Symbol("id))
+7.BigInt :-work with very large numbers 
