@@ -1,0 +1,9 @@
+1> What are Operators?
+A. Operators are symbols or key words used to perform operation on variable and values
+
+Types of Operators:
+1.Arithmetic 
+2.assignment
+3.comparison
+4.logical
+5.ternary
