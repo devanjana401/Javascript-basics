@@ -10,7 +10,6 @@
 //<= lesser than or equal to
 //'2' !== 2   condition is TRUE 
 //'2' == 2 TRUE
-//'2' === 2 TRUE
 //'2' === 2 FALSE (checking both value and data type)
 
 let a = '2';

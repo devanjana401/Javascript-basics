@@ -1,0 +1,3 @@
+Non primitive - reference typr
+It can hold multiple values
+mutable

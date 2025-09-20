@@ -1,0 +1,2 @@
+array is a datastructure used to store multiple values in a single variable.
+ordered collection of datastructure.

@@ -17,10 +17,10 @@ console.log("a % b=", a%b)//reminder
 console.log("a ** b=", a**b)// exponential
 //[10^2=10*10=100]
 
-//demonstrating increment ++
+//increment ++
 console.log("a++",a++);
 console.log("after a++=",a);
 
-//demonstrating decrement --
+//decrement --
 console.log("a--",a--);
 console.log("after a--=",a);
