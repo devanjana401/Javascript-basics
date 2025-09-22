@@ -1,21 +1,14 @@
 let n = 5;
 for (let i = 1; i <= n; i++) {
     let row = "";
-
-    // left stars (increase each row)
-    for (let j = 1; j <= i; j++) {
-        row += "*";
-    }
-
-    // spaces in the middle (decrease each row)
-    for (let j = 1; j <= 2 * (n - i); j++) {
+    for (let j = i; j < n; j++) {                // first loop for spaces
         row += " ";
     }
-
-    // right stars (mirror of the left)
-    for (let j = 1; j <= i; j++) {
+    for (let k = 1; k <= (2 * i - 1); k++) {      // second loop for stars on left
+        row += "";
+    }
+    for (let k = 1; k <= (2 * i - 1); k++) {      // second loop for stars on left
         row += "*";
     }
-
     console.log(row);
 }
