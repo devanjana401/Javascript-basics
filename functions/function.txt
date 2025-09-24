@@ -1,0 +1,12 @@
+Functions(method) are blocks of code designed to perform a perticular task.
+Can we define functions in many ways:
+1.Function declaration
+2.Function expression
+3.Arrow functions
+4.Callback functions
+5.Anonymous functions
+6.IIF(immediately invoked function expression)
+
+
+Pre-defined functions/Builtin functions:-
+    These are functions,that are already provided by javascript -- string functions.date functions,math functions

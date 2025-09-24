@@ -1,0 +1,15 @@
+Shortest syntax for creating functions in javascript,Introducing ES6(Ecma script 6)
+
+Example:-
+
+1.Regular function
+
+function add(a,b){
+    retun a+b
+}
+add(1,2)
+
+2.Arrow function
+
+const add = (a,b) => a+b;
+add(1,2)
