@@ -1,4 +1,5 @@
 Shortest syntax for creating functions in javascript,Introducing ES6(Ecma script 6)
+Not hoisting
 
 Example:-
 
