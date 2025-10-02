@@ -1,0 +1,10 @@
+-- Built-in functions or native methods
+-- These are functions,already provided by js
+-- features
+    1.Time saving
+    2.Increase code readability
+    3.Optimized and reliable
+-- Eg:- 
+    1.String method or functions
+    2.Date functions
+    3.Math functions
