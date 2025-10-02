@@ -1,10 +1,7 @@
-// Step 1: Import prompt-sync
 const prompt = require("prompt-sync")();
-
-// Step 2: Get user input
+//Get user input
 let userInput = prompt("Do you want the promise to succeed? (yes/no): ");
-
-// Step 3: Create the promise based on user input
+//Create the promise based on user input
 let myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         if (userInput.toLowerCase() === "yes") {
@@ -12,10 +9,9 @@ let myPromise = new Promise((resolve, reject) => {
         } else {
             reject("Promise rejected");
         }
-    }, 2000); // 2-second delay
+    }, 2000); 
 });
-
-// Step 4: Handle the promise
+//Handle the promise
 myPromise
     .then(result => console.log(result))  // runs if promise is resolved
     .catch(error => console.log(error))   // runs if promise is rejected
