@@ -1,0 +1,3 @@
+The rest parameters :-
+syntax:   (...)
+It allows to accept an infinite(indefinite) number of arguments..
