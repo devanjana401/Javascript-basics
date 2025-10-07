@@ -1,9 +1,9 @@
 Functions(method) are blocks of code designed to perform a perticular task.
 Can we define functions in many ways:
-1.Function declaration
-2.Function expression
+1.Function declaration (hoisted,named)
+2.Function expression (not hoisted,named or anonymous)
 3.Arrow functions
-4.Callback functions
+4.Callback functions--callback hell(code like pyramid so fixing error and maintainin complicated..it also called pyramid of Doom)
 5.Anonymous functions
 6.IIF(immediately invoked function expression)
 
