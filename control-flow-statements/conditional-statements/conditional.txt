@@ -1,4 +1,4 @@
 // used to control program flow
-//to execute prticular block among different blocks
+//to execute particular block among different blocks
 //if,if-else,else-if,switch
 //anti-dynamic behaviour

@@ -1,0 +1,8 @@
+Think of oop,has making yourown custom things(called objects)
+We can cutomize(make your own thing with properties(cahracteristics and actions))
+key concepts;-
+1.Class -- blueprint for creating objects-(an instance of a class)
+2.Encapsulation -- bundling datas and methods that operate on the data within one unit
+3.Inheritance -- one class can inherit properties and methods from anoter class(by using "extend' keyword)
+4.Polymorphism -- the ability to use methods in different ways
+5.Abstraction -- hidding complex implementation details and providing necessary details only
