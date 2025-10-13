@@ -1,2 +1,2 @@
-Only taking alues
+Only taking values
 API - application programming interfaces

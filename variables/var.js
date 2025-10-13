@@ -8,4 +8,4 @@ console.log(x);
 
 //function scoped
 // older way of declaring
-// can re-assign,re-declare//
+// can re-assign,re-declare

@@ -1,0 +1,23 @@
+<!-- This methods are used to find and interact with html elements on the webpage.
+ They allow you to dynamically select elements using css selectors and manipulate them with JS
+    query-selector -- return the first match
+    query-selectorall -- returns all match -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <script>
+        const firstBox = document.querySelector('.box');
+        console.log(firstBox.textContent);
+    </script>
+</body>
+</html>
