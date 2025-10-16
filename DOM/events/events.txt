@@ -1,0 +1,2 @@
+Dynamically add or remove beahaviour during runtime.
+Event handling means writing js code that will run when a specific event occured.
