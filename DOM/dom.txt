@@ -1,6 +1,6 @@
 DOM -- Document Object Model
     It is a programming interface(set of tools,methods and rules)
-    It allows a software to interaxt with something else such as a system,service,
+    It allows a software to interact with something else such as a system,service,
     Provided by Browser
     Tree like structure
 It allows js to interact with and manipulate the structure,style and content of the page

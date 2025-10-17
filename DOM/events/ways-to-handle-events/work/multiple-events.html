@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+
+    <script>
+        let button = document.getElementById("btn");
+
+        // Click events
+        button.addEventListener('click', function() {
+            alert("Button clicked using addEventListener");
+        });
+
+        button.addEventListener('click', function() {
+            console.log("Another function for same button");
+        });
+        
+        // Mouse hover (mouseover)
+        button.addEventListener('mouseover', function() {
+            button.style.background = 'blue';
+            button.style.color = 'white';
+            button.style.cursor = 'pointer';
+        });
+
+        // Mouse out (when hover ends)
+        button.addEventListener('mouseout', function() {
+            button.style.background = '';
+            button.style.color = '';
+        });
+    </script>
+</body>
+</html>
