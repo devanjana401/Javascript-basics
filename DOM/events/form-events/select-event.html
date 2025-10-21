@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+  <select id="fruits">
+    <option value="">......</option>
+    <option value="apple">Apple</option>
+    <option value="mango">Mango</option>
+    <option value="orange">Orange</option>
+  </select>
+
+  <input type="text" id="text" placeholder="Type here...">
+  <p id="output"></p>
+
+  <script>
+    const fruits = document.getElementById("fruits");
+    const text = document.getElementById("text");
+    const output = document.getElementById("output");
+
+    // change event for dropdown
+    fruits.addEventListener("change", () => { 
+      output.innerText = "Changed: " + fruits.value;
+    });
+
+    
+
+    // input event for text box (shows while typing)
+    text.addEventListener("input", () => {
+      output.innerText = "Typing: " + text.value;
+    });
+
+    // select event for text box (shows when you highlight text)
+    text.addEventListener("select", () => {
+      output.innerText = "Selected text: " + text.value;
+    });
+  </script>
+</body>
+</html>

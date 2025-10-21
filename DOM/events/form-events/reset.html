@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <input type="text" placeholder="Type something....">
+        <button type="submit">Submit</button>
+        <button type="reset" id="reset">Reset</button>
+        <p id="output"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById('myform');
+        const output = document.getElementById('output');
+        const reset = document.getElementById('reset');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // To stop unwanted refreshing
+            output.innerText = 'Form Submitted..!';
+        });
+        form.addEventListener('reset', (event) => {
+            output.innerText = ' ';
+        });
+        // reset.addEventListener('click', () => {
+        //     output.innerText = ''; // Clears output on reset
+        // });
+    </script>
+</body>
+</html>
