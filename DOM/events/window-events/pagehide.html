@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Pagehide Event</h2>
+    <p id="msg" style="color:blue; font-weight:bold;"></p>
+
+    <script>
+        window.addEventListener("pagehide", (event) => {
+            console.log("Pagehide event fired");
+            document.getElementById("msg").textContent = "Page is being hidden or unloaded!";
+        });
+    </script>
+</body>
+</html>
