@@ -1,0 +1,22 @@
+<!-- Seeking - drag the progress bar to move the audio to forward or backward -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audioSeeked" controls>
+        <source src="./audio2.mpeg" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audioSeeked = document.getElementById("audioSeeked");
+        audioSeeked.addEventListener("seeked",()=>{
+            alert("Seeked event fired!!")
+        })
+    </script>
+</body>
+</html>
