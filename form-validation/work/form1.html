@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            background: rgb(38, 38, 79);
+        }
+        h2{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            height: 750px;
+            width: 400px;
+            margin: auto;
+        }
+
+        input,textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 380px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background: green;
+            width: 400px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>Contact Form</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your first name">
+            <span class="error" id="nameError"></span><br>
+
+            <label for="lastname">Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your last name">
+            <span class="error" id="lastnameError"></span><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <span class="error" id="emailError"></span><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+            <span class="error" id="phoneError"></span><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city name">
+            <span class="error" id="cityError"></span><br>
+
+            <label for="message">Message:</label><br>
+            <textarea name="message" id="message" style="height: 100px;" placeholder="Message"></textarea>
+            <span class="error" id="messageError"></span><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            //clear previous error
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("lastnameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("cityError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+
+            let isValid = true;
+
+            //name validation
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").innerText = "First name is required!";
+                isValid = false;
+            };
+            //lastname validation
+            const lastname = document.getElementById("lastname").value.trim();
+            if (lastname === "") {
+                document.getElementById("lastnameError").innerText = "Last name is required!";
+                isValid = false;
+            };
+            //email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Email is required";
+                isValid = false;
+            };
+            //phone validation
+            const phone = document.getElementById("phone").value.trim();
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Phone number must be 10 digits";
+                isValid = false;
+            };
+            //city validation
+            const city = document.getElementById("city").value.trim();
+            if (city === "") {
+                document.getElementById("cityError").innerText = "City name is required!";
+                isValid = false;
+            };
+            //message validation
+            const message = document.getElementById("message").value.trim();
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Message required!";
+                isValid = false;
+            };
+
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>
