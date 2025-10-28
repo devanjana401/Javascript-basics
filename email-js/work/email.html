@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background: rgb(25, 25, 85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .main {
+      background: #fff;
+      width: 900px;
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .main img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    .form-section {
+      width: 50%;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #1a1a80;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: #0047ff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background: #1a1a80;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2d2dbc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Office Building">
+
+    <div class="form-section">
+      <h2>Let's Get In Touch.</h2>
+      <p>or just reach out manually to <span>Paradise@gmail.com</span></p>
+
+      <form id="contact-form">
+        <label>First Name</label>
+        <input type="text" name="first_name" placeholder="Enter Your First Name" required>
+
+        <label>Last Name</label>
+        <input type="text" name="last_name" placeholder="Enter Your Last Name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter Your Email Address" required>
+
+        <label>Phone Number</label>
+        <input type="number" name="phone" placeholder="Enter Your Phone Number" required>
+
+        <label>Message</label>
+        <textarea name="message" placeholder="Enter Your Main Text Here..." required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("JYvvIOQtYOD-ifxcc");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      emailjs.sendForm("service_prsx7ap", "template_futve7u", this)
+        .then(function () {
+          alert("Message sent successfully!");
+        }, function (error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+        });
+    });
+  </script>
+</body>
+
+</html>
